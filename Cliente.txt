@@ -1,0 +1,39 @@
+package atividadesM2S4;
+/**
+ *
+ * @author Ricardo
+ */
+public class Cliente {
+    private String titular;
+    private String telefone;
+    protected String itensPedidos; //Itens comprados pelo cliente
+    protected double gastos; // Valor gasto pelo cliente
+    Conta saldo;
+
+    public Cliente(String titular,String telefone){
+        this.titular = titular;
+        this.telefone = telefone;
+    }
+    
+    public void setTitular(String titular){
+        this.titular = titular;
+    }
+    public String getTitular(){
+        return this.titular;
+    }
+    
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
+    public String getTelefone(){
+        return this.telefone;
+    }
+    
+    public void pagar (){
+        if (gastos <= saldo.get.saldo()){             
+            this.saldo = saldo - gastos;
+        }else {
+            System.out.println("Saldo insuficiente para pagar a conta!");
+        }
+    }
+}
